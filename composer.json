@@ -1,7 +1,7 @@
 {
     "name": "wp-cli/site-health-command",
     "type": "wp-cli-package",
-    "description": "Shows WordPress Health Check data.",
+    "description": "Health Checks WordPress.",
     "homepage": "https://github.com/wp-cli/site-health-command",
     "license": "MIT",
     "authors": [
