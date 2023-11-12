@@ -45,14 +45,14 @@
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="WP_CLI\DB"/><!-- Namespaces. -->
-				<element value="wpcli_db"/><!-- Global variables and such. -->
+				<element value="WP_CLI\SITE_HEALTH"/><!-- Namespaces. -->
+				<element value="wpcli_site_health"/><!-- Global variables and such. -->
 			</property>
 		</properties>
 	</rule>
 	
 	<!-- Exclude existing classes from the prefix rule as it would break BC to prefix them now. -->
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedClassFound">
-		<exclude-pattern>*/src/DB_Command\.php$</exclude-pattern>
+		<exclude-pattern>*/src/Site_Health_Command\.php$</exclude-pattern>
 	</rule>
 </ruleset>

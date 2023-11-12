@@ -78,33 +78,33 @@ class Site_Health_Command extends WP_CLI_Command {
 		$wordpress_version = $instance->get_test_wordpress_version();
 
 		$results[] = [
-			'check'   => 'WordPress Version',
+			'check'  => 'WordPress Version',
 			'type'   => $wordpress_version['badge']['label'],
-			'status' => $wordpress_version['status']
+			'status' => $wordpress_version['status'],
 		];
 
 		$plugins_version = $instance->get_test_plugin_version();
 
 		$results[] = [
-			'check'   => 'Plugin Version',
+			'check'  => 'Plugin Version',
 			'type'   => $plugins_version['badge']['label'],
-			'status' => $plugins_version['status']
+			'status' => $plugins_version['status'],
 		];
 
 		$rest_availability = $instance->get_test_rest_availability();
 
 		$results[] = [
-			'check'   => 'REST API Availability',
+			'check'  => 'REST API Availability',
 			'type'   => $rest_availability['badge']['label'],
-			'status' => $rest_availability['status']
+			'status' => $rest_availability['status'],
 		];
 
 		$dotorg_communication = $instance->get_test_dotorg_communication();
 
 		$results[] = [
-			'check'   => 'Communication with WordPress.org',
+			'check'  => 'Communication with WordPress.org',
 			'type'   => $dotorg_communication['badge']['label'],
-			'status' => $dotorg_communication['status']
+			'status' => $dotorg_communication['status'],
 		];
 
 		$formatter = new Formatter( $assoc_args, [ 'check', 'type', 'status' ] );
